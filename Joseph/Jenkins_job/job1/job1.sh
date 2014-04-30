@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ -c *.cpp -o exe
+g++ -c sum.cpp -o exe
