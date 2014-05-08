@@ -6,7 +6,7 @@ public class SunnyWeather extends Weather {
         relative_humidity = 20;
     }
     public void sunny(){
-        System.out.println("-----------------Today sunny weather---------------");
+        System.out.println("Today sunny weather");
 
     }
 
