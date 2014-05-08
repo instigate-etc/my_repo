@@ -21,7 +21,7 @@ public class ParzTivGumar {
     public static void main(String[] args) {
         long gumar;
         ParzTivGumar A = new ParzTivGumar();
-        gumar = A.scan(0,2000);
-        System.out.print(" gumar = "+gumar);
+        gumar = A.scan(1,20);
+        System.out.print(" gumar="+gumar+" ");
     }
 }

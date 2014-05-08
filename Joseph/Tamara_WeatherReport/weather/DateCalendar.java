@@ -21,9 +21,8 @@ public class DateCalendar {
         }
     }
 
-    public int time1() {
+    public void time1() {
         System.out.println(dateFormat.format(cal.getTime()));
-        return 0;
     }
 
 }
