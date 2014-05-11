@@ -15,6 +15,7 @@ public class Pythagoras_trio {
 						System.out.println("a=" + a + "\nb=" + b + "\nc=" + c);
 						mult = a*b*c;
 						System.out.println("a*b*c=" + mult);
+						break;
 					}
 					
 				}
