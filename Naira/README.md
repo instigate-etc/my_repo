@@ -16,7 +16,7 @@ If you work with vim you need to compile java files before running the program:
          javac MainShop.java
 After write this command:
          java MainShop.java
-You can find this program in https://github.com/student105/my_repo/edit/master/Naira/count1000 repository.
+You can find this program in https://github.com/student105/my_repo/tree/master/Naira/Online_shop repository.
 
 ---------------------------------------------------------------Thenk you!---------------------------------------------------
-With this program, we simulate operation of the online store. This program is output for the shopper product.
+
