@@ -18,5 +18,5 @@ After write this command:
          java MainShop.java
 You can find this program in https://github.com/student105/my_repo/tree/master/Naira/Online_shop repository.
 
----------------------------------------------------------------Thenk you!---------------------------------------------------
+---------------------------------------------------------------Thenk you!--------------------------------------------------------
 
