@@ -1,4 +1,4 @@
-This is README file for counting symbols before 1000.
+------------------------------------------This is README file for counting symbols before 1000.---------------------------------------------------
 
 Content
 1.Author
@@ -13,4 +13,9 @@ Introduction
 With this program we find how many chars needed for writing 1 to 1000 numbers with english language.
 Program written in Java programming language.
 If you work with vim you need to compile java files before running the program:
-         Javac Main_Count.java
+         javac Main_Count.java
+After write this command:
+         java Main_Count.java
+You can find this program in https://github.com/student105/my_repo/edit/master/Naira/count1000  repository.
+
+---------------------------------------------------------------Thenk you!------------------------------------------------------------------------
