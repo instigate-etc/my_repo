@@ -27,13 +27,15 @@ public class Store {
 		String s1 = input1.next();
 		for (String t : bag.getBrands()) {
 			if (s.equals(t)) {
-				bag.setCounts(new int[] { bag.getCounts()[0],
-						bag.getCounts()[1],
-						bag.getCounts()[k] - Integer.parseInt(s1),
-						bag.getCounts()[3] });
-				if (bag.getCounts()[k]<0){
-					System.out.println("This brands off....");
-				}else{
+					if(bag.getCounts()[k]<Integer.parseInt(s1)){
+					System.out.println("Not thet count....");
+				}
+				
+				else{
+					bag.setCounts(new int[] { bag.getCounts()[0],
+							bag.getCounts()[1],
+							bag.getCounts()[k] - Integer.parseInt(s1),
+							bag.getCounts()[3] });
 					System.out.println(bag.getCounts()[k]);
 					
 				}
@@ -50,17 +52,20 @@ public class Store {
 		for (String t1 : shoes.getBrands()) {
 			if (p.equals(t1)) {
 
-				shoes.setCounts(new int[] { shoes.getCounts()[0],
-						shoes.getCounts()[1],
-						shoes.getCounts()[k1] - Integer.parseInt(p1),
-						shoes.getCounts()[3] });
-			if (shoes.getCounts()[k1]<0){
-				System.out.println("This brands off....");
-			}else{
-				System.out.println(shoes.getCounts()[k1]);
+				if(shoes.getCounts()[k1]<Integer.parseInt(p1)){
+					System.out.println("Not thet count....");
+				}
 				
-			}yes1 = 1;
-				total_value=total_value+Integer.parseInt(p1)*shoes.getValues()[k1];
+				else{
+					shoes.setCounts(new int[] { shoes.getCounts()[0],
+							shoes.getCounts()[1],
+							shoes.getCounts()[k1] - Integer.parseInt(p1),
+							shoes.getCounts()[3] });
+					System.out.println(shoes.getCounts()[k1]);
+					
+				}
+			yes1 = 1;
+			total_value=total_value+Integer.parseInt(p1)*shoes.getValues()[k1];
 			}
 			k1 = k1 + 1;
 
@@ -75,6 +80,8 @@ public class Store {
 		}
 
 	}
+	
+	
 
 	public void store() {
 		int y = 0;

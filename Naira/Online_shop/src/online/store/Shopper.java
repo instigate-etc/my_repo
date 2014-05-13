@@ -10,7 +10,6 @@ public class Shopper {
 		this.setCity(city);
 	}
 	
-
 	public String getName() {
 		return name;
 	}
