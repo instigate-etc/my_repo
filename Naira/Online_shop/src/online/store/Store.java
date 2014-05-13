@@ -3,97 +3,72 @@ package online.store;
 import java.util.Scanner;
 
 public class Store {
-	int h = 0;
-	int h1 = 0;
 	public String input;
-	String s1;
-	String p1;
-	int k1;
 	int k;
-	Bag bag = new Bag();
-	Shoes shoes = new Shoes();
+	Product bag = new Bag();
+	Product shoes = new Shoes();
 	Product product = new Product();
 	Scanner input1 = new Scanner(System.in);
 	double total_value = 0;
-
+	int yes = 0;
 	public void shopper() {
-		k = 0;
-		k1 = 0;
-		int yes = 0;
-		int yes1 = 0;
-		System.out.print("Brand Bag ");
-		String s = input1.next();
-		System.out.print("Count Bag ");
-		String s1 = input1.next();
-		for (String t : bag.getBrands()) {
-			if (s.equals(t)) {
-				bag.setCounts(new int[] { bag.getCounts()[0],
-						bag.getCounts()[1],
-						bag.getCounts()[k] - Integer.parseInt(s1),
-						bag.getCounts()[3] });
-				if (bag.getCounts()[k]<0){
-					System.out.println("This brands off....");
-				}else{
-					System.out.println(bag.getCounts()[k]);
-					
-				}
-				yes = 1;
-				total_value=total_value+Integer.parseInt(s1)*bag.getValues()[k];
-			}
-			k = k + 1;
-		}
-		ifbe(yes);
-		System.out.print("Brand Shoes ");
-		String p = input1.next();
-		System.out.print("Count Shoes ");
-		String p1 = input1.next();
-		for (String t1 : shoes.getBrands()) {
-			if (p.equals(t1)) {
-
-				shoes.setCounts(new int[] { shoes.getCounts()[0],
-						shoes.getCounts()[1],
-						shoes.getCounts()[k1] - Integer.parseInt(p1),
-						shoes.getCounts()[3] });
-			if (shoes.getCounts()[k1]<0){
-				System.out.println("This brands off....");
-			}else{
-				System.out.println(shoes.getCounts()[k1]);
-				
-			}yes1 = 1;
-				total_value=total_value+Integer.parseInt(p1)*shoes.getValues()[k1];
-			}
-			k1 = k1 + 1;
-
-		}
-		ifbe(yes1);
-		
+		buy_and_sell(bag,"Bag");
+		buy_and_sell(shoes,"Shoes");
 	}
-
 	private void ifbe(int yes) {
 		if (yes == 0) {
 			System.out.println("Please we havn't this Brand");
 		}
-
 	}
+	public void buy_and_sell(Product p,String brend_name){
+		k=0;
+		yes=0;
+		System.out.print("Brand "+brend_name+" ");
+		String s = input1.next();
+		System.out.print("Count "+brend_name+" ");
+		String s1 = input1.next();
+		for (String t1 : p.getBrands()) {
+			if (s.equals(t1)) {
+
+				if(p.getCounts()[k]<Integer.parseInt(s1)){
+					System.out.println("Not thet count....");
+				}
+				else{
+					p.setCounts(new int[] { p.getCounts()[0],
+							p.getCounts()[1],
+							p.getCounts()[k] - Integer.parseInt(s1),
+							p.getCounts()[3] });
+					System.out.println(p.getCounts()[k]);
+					total_value=total_value+Integer.parseInt(s1)*p.getValues()[k];
+				}
+			yes = 1;
+		
+			}
+			k = k + 1;
+		}
+		ifbe(yes);
+		
+	}
+	
 
 	public void store() {
-		int y = 0;
-		int y1 = 0;
+		int shoes_count = 0;
+		int bag_count = 0;
 		System.out
 				.println("-------------------------Online_shop_product------------------------");
 		System.out
 				.println("-------------------------Online_shop_product_Shoes------------------------");
-		while (y < shoes.getCounts().length) {
-			System.out.println(shoes.getBrands()[y] + " "
-					+ shoes.getCounts()[y] + " " + shoes.getValues()[y]);
-			y++;
+		while (shoes_count < shoes.getCounts().length) {
+			System.out.println(shoes.getBrands()[shoes_count] + " "
+					+ shoes.getCounts()[shoes_count] + " " + shoes.getValues()[shoes_count]);
+			shoes_count++;
 		}
 		System.out
 				.println("-------------------------Online_shop_product_Bags------------------------");
-		while (y1 < bag.getCounts().length) {
-			System.out.println(bag.getBrands()[y1] + " " + bag.getCounts()[y1]
-					+ " " + bag.getValues()[y1]);
-			y1++;
+		while (bag_count < bag.getCounts().length) {
+			System.out.println(bag.getBrands()[bag_count] + " " + bag.getCounts()[bag_count]
+					+ " " + bag.getValues()[bag_count]);
+			bag_count++;
 		}
 		 System.out.println(total_value);
 	}
