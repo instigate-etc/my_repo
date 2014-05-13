@@ -16,10 +16,6 @@ public void setQuality(String quality) {
 	this.quality = quality;
 }
 
-public void sale() {
-	//this.setValues(getValues());
-	System.out.println("Value="+getValues());
-}
 public int[] getCounts() {
 	return counts;
 }

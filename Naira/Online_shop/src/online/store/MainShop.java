@@ -11,7 +11,7 @@ public class MainShop {
 		d.store();
 		System.out.println("----"+shopper.getName()+"'s from "+shopper.getCity()+" I choes the"+"----");
 		d.shopper();
-		System.out.println(shopper1.getName()+"'s from "+shopper1.getCity()+" I choes the");
+		System.out.println("-----"+shopper1.getName()+"'s from "+shopper1.getCity()+" I choes the"+"----");
 		d.shopper();
 		d.store();
 	}
