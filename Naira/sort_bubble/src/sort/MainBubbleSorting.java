@@ -1,4 +1,4 @@
-package sort;
+//package sort;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class MainBubbleSorting {
 	static Scanner input_number = new Scanner(System.in);
 	static String number = input_number.next();
 	static int middle;
-	static int c;
+   static String c;
 	static int t = 1;
 	static int y=0;
 	static int[] arr={2,3,5,6,7,8,9,14,18,25};
@@ -39,9 +39,9 @@ public class MainBubbleSorting {
 			for (int i = 1; i < args.length - j; i++) {
 				if (Integer.parseInt(args[i - 1]) > Integer.parseInt(args[i])) {
 					t = 1;
-					c = Integer.parseInt(args[i - 1]);
+					c =args[i - 1];
 					args[i - 1] = args[i];
-					args[i] = Integer.toString(c);
+					args[i] =c;
 					j++;
 				}
 			}
@@ -54,7 +54,7 @@ public class MainBubbleSorting {
 
 	public static void binary_search(String[] args, String number) {
 		System.out.print("\n");
-		int ep = args.length;
+		int ep = args.length-1;
 		int bp = 0;
 		while (ep > bp) {
 			middle = (int) (ep+ bp) / 2;
