@@ -1,8 +1,6 @@
-package insertion_sort;
-
 import java.util.Scanner;
 
-public class InsertionSort {
+	public class InsertionSort {
 	static int c;
 	static Scanner input_number = new Scanner(System.in);
 	static String number = input_number.next();
